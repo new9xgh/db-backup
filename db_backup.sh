@@ -45,7 +45,7 @@ do
     echo "[$(date +"%y-%m-%d %H:%M:%S")] begin backup [${db_name}]" >> ${log_file}
 
     mkdir -p ${new_path}/${db_name}
-    ${mydumper} -h ${db_host} -u ${db_username} -p ${db_password} -B ${db_name} -o ${new_path}/${db_name} -K -c -t 4 -v 2
+    ${mydumper} -h ${db_host} -u ${db_username} -p ${db_password} -B ${db_name} -o ${new_path}/${db_name} --long-query-guard 300 --kill-long-queries -c -t 4 -v 2
 
     if [ $? -ne 0 ];then
         echo "[$(date +"%y-%m-%d %H:%M:%S")] backup failed [${db_name}] " >> ${log_file}
