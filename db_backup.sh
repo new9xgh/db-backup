@@ -50,7 +50,7 @@ do
     if [ $? -ne 0 ];then
         echo "[$(date +"%y-%m-%d %H:%M:%S")] backup failed [${db_name}] " >> ${log_file}
         # TODO send mail
-        # echo $LogFile | /bin/mail -s "server mysql db ${db_name} backup failed" 244013304@qq.com
+        # echo ${log_file} | /bin/mail -s "server mysql db ${db_name} backup failed" 244013304@qq.com
         exit 1
     else
         echo "[$(date +"%y-%m-%d %H:%M:%S")] backup success [${db_name}]" >> ${log_file}
