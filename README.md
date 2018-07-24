@@ -2,8 +2,6 @@
 
 Shell script to backup mysql database.
 
-- Script create sql file for specified database.
-
 ## Requirements
 
 - mydumper
@@ -44,6 +42,9 @@ mydumper --help
 # create backup folder
 mkdir /home/work/workplace/backup/db/data -p
 mkdir /home/work/workplace/backup/db/log
+
+# modify config
+vi <PATH TO BACKUP FOLDER>/db_backup.sh
 
 # change permissions
 chmod +x <PATH TO BACKUP FOLDER>/db_backup.sh
