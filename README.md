@@ -27,7 +27,7 @@ wget https://launchpad.net/mydumper/0.9/0.9.1/+download/mydumper-0.9.1.tar.gz
 
 # make and install
 tar -zxvf mydumper-0.9.1.tar.gz
-cd mydumper-0.9.1.tar.gz
+cd mydumper-0.9.1
 cmake .
 make && make install
 
